@@ -3,3 +3,6 @@ package-lock.json
 
 # Ignore my vscode extension
 .history
+# Ignore prettierrc file
+.prettierrc
+
