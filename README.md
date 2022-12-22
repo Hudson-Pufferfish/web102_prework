@@ -37,9 +37,10 @@ GIF created with Peek on Linux Ubuntu 22.04
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+### Describe any challenges encountered while building the app:
 
-My main challenge is that I do not have a phone number so that I cannot register for imgur account to upload my gif. Then I tried to use gifyu.com instead :-) However. the Codepath website does NOT accept link from gifyu, so I have to ask my friend to receive code from imgur so that I could register my imgur account.
+- My main challenge is that I do not have a phone number so that I cannot register for imgur account to upload my gif. Then I tried to use gifyu.com instead :-) However. the Codepath website does NOT accept link from gifyu, so I have to ask my friend to receive code from imgur so that I could register my imgur account.
+- I thought this pre-work assignment would be harder. Hence, I constantly got bored and lost my focus while doing this project (because of I'm kind of an ADHD person). I think I could have done this project in 1 or 2 hours instead.
 
 ## License
 
