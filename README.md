@@ -1,10 +1,10 @@
-# WEB102 Prework - _Name of App Here_
+# WEB102 Prework - _SeaGames_
 
 Submitted by: **Hudson Nguyen**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**SeaGames** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
