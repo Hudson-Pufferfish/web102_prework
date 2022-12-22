@@ -24,7 +24,7 @@ The following **optional** improvements are implemented:
 Here's a walkthrough of implemented features:
 
 <img src='web102_prework.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<!--OR  https://gifyu.com/image/SkVLn -->
+<!--OR  https://imgur.com/a/mHCptTS -->
 
 <!-- Replace this with whatever GIF tool you used! -->
 
