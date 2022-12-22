@@ -30,37 +30,37 @@ function addGamesToPage(games) {
   // loop over each item in the data
   games.forEach(game => {
     // create a new div element, which will become the game card
-    const div = document.createElement('div');
-    const img = document.createElement('img');
-    img.src = `${game.img}`;
+    const cardEl = document.createElement('div');
+    const cardImg = document.createElement('img');
+    cardImg.src = `${game.img}`;
 
     // add the class game-card to the list
-    div.classList.add('game-card');
-    img.classList.add('game-img');
+    cardEl.classList.add('game-card');
+    cardImg.classList.add('game-img');
 
-    const button = document.createElement('button');
-    // button.innerHTML = 'Favorite';
-    // button.classList.add('favorite-button');
-    button.dataset.name = game.name;
+    // const cardButton = document.createElement('button');
+    // cardButton.innerHTML = 'Favorite';
+    // cardButton.classList.add('favorite-button');
+    // cardButton.dataset.name = game.name;
 
     // set the inner HTML using a template literal to display some info
     // about each game
-    div.innerHTML = `<p><strong>${game.name}</strong></p>`;
-    div.appendChild(img);
-    div.innerHTML += `<p>${game.description}</p>`;
-    div.innerHTML += '<br>';
-    div.innerHTML += `<p>Backers: ${game.backers}</p>`;
-    div.innerHTML += `<p>Pledged: $${game.pledged}</p>`;
-    div.innerHTML += `<p>Goal: $${game.goal}</p>`;
-    div.appendChild(button);
+    cardEl.innerHTML = `<p><strong>${game.name}</strong></p>`;
+    cardEl.appendChild(cardImg);
+    cardEl.innerHTML += `<p>${game.description}</p>`;
+    cardEl.innerHTML += '<br>';
+    cardEl.innerHTML += `<p>Backers: ${game.backers}</p>`;
+    cardEl.innerHTML += `<p>Pledged: $${game.pledged}</p>`;
+    cardEl.innerHTML += `<p>Goal: $${game.goal}</p>`;
+    // cardEl.appendChild(cardButton);
 
     // TIP: if your images are not displaying, make sure there is space
     // between the end of the src attribute and the end of the tag ("/>")
     //   TODO
-    // button.addEventListener('click', favorite);
+    // cardButton.addEventListener('click', favorite);
 
     // append the game to the games-container
-    document.getElementById('games-container').appendChild(div);
+    document.getElementById('games-container').appendChild(cardEl);
   });
 }
 
@@ -162,10 +162,30 @@ allBtn.addEventListener('click', showAllGames);
 const descriptionContainer = document.getElementById('description-container');
 
 // use filter or reduce to count the number of unfunded games
+const unfundedGames = GAMES_JSON.filter(game => {
+  return game.goal > game.pledged;
+});
 
 // create a string that explains the number of unfunded games using the ternary operator
+const string =
+  unfundedGames.length === 1
+    ? `A total of <strong>$${totalRaised.toLocaleString(
+        'en-US'
+      )}</strong> has been raised for ${
+        GAMES_JSON.length
+      } games. Currently, <strong>1 game</strong> remains unfunded. We need your help to fund these amazing games!`
+    : `A total of <strong>$${totalRaised.toLocaleString(
+        'en-US'
+      )}</strong> has been raised for ${
+        GAMES_JSON.length
+      } games. Currently, <strong>${
+        unfundedGames.length
+      } games</strong> remain unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
+const descEl = document.createElement('p');
+descEl.innerHTML = string;
+descriptionContainer.appendChild(descEl);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
