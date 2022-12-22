@@ -64,6 +64,11 @@ body {
   width: 300px;
   text-align: center;
   border-radius: 7px;
+
+  /* TODO: OPTIONAL CHALLENGE: Styling website */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .game-card:hover {

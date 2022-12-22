@@ -38,26 +38,28 @@ function addGamesToPage(games) {
     cardEl.classList.add('game-card');
     cardImg.classList.add('game-img');
 
-    // const cardButton = document.createElement('button');
-    // cardButton.innerHTML = 'Favorite';
-    // cardButton.classList.add('favorite-button');
-    // cardButton.dataset.name = game.name;
-
     // set the inner HTML using a template literal to display some info
     // about each game
-    cardEl.innerHTML = `<p><strong>${game.name}</strong></p>`;
-    cardEl.appendChild(cardImg);
-    cardEl.innerHTML += `<p>${game.description}</p>`;
-    cardEl.innerHTML += '<br>';
-    cardEl.innerHTML += `<p>Backers: ${game.backers}</p>`;
-    cardEl.innerHTML += `<p>Pledged: $${game.pledged}</p>`;
-    cardEl.innerHTML += `<p>Goal: $${game.goal}</p>`;
-    // cardEl.appendChild(cardButton);
+    const cardInfo = document.createElement('div');
+    cardInfo.classList.add('card-info');
+
+    cardInfo.innerHTML = `<p><strong>${game.name}</strong></p>`;
+    cardInfo.appendChild(cardImg);
+    cardInfo.innerHTML += `<p>${game.description}</p>`;
+    cardInfo.innerHTML += '<br>';
+
+    cardEl.appendChild(cardInfo);
+
+    const cardStats = document.createElement('div');
+    cardStats.classList.add('card-stats');
+    cardStats.innerHTML += `<p>Backers: ${game.backers}</p>`;
+    cardStats.innerHTML += `<p>Pledged: $${game.pledged}</p>`;
+    cardStats.innerHTML += `<p>Goal: $${game.goal}</p>`;
+
+    cardEl.appendChild(cardStats);
 
     // TIP: if your images are not displaying, make sure there is space
     // between the end of the src attribute and the end of the tag ("/>")
-    //   TODO
-    // cardButton.addEventListener('click', favorite);
 
     // append the game to the games-container
     document.getElementById('games-container').appendChild(cardEl);
@@ -200,7 +202,15 @@ const sortedGames = GAMES_JSON.sort((item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+// console.log(sortedGames);
+const [firstGame, secondGame] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameName = document.createElement('p');
+firstGameName.innerHTML = firstGame.name;
+firstGameContainer.appendChild(firstGameName);
 
 // do the same for the runner up item
+const secondGameName = document.createElement('p');
+secondGameName.innerHTML = secondGame.name;
+secondGameContainer.appendChild(secondGameName);
