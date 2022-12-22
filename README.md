@@ -39,7 +39,7 @@ GIF created with Peek on Linux Ubuntu 22.04
 
 Describe any challenges encountered while building the app.
 
-My main challenge is that I do not have a phone number so that I cannot register for imgur account to upload my gif. Then I tried to use gifyu.com instead :-)
+My main challenge is that I do not have a phone number so that I cannot register for imgur account to upload my gif. Then I tried to use gifyu.com instead :-) However. the Codepath website does NOT accept link from gifyu, so I have to ask my friend to receive code from imgur so that I could register my imgur account.
 
 ## License
 
