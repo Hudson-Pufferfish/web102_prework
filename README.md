@@ -24,6 +24,7 @@ The following **optional** improvements are implemented:
 Here's a walkthrough of implemented features:
 
 <img src='web102_prework.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<!--OR  https://gifyu.com/image/SkVLn -->
 
 <!-- Replace this with whatever GIF tool you used! -->
 
@@ -37,6 +38,8 @@ GIF created with Peek on Linux Ubuntu 22.04
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+My main challenge is that I do not have a phone number so that I cannot register for imgur account to upload my gif. Then I tried to use gifyu.com instead :-)
 
 ## License
 
